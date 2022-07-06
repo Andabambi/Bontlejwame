@@ -18,20 +18,37 @@
         body{background-color: white;}
 
         footer{background-color: rgb(166, 190, 182);}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
+/* Full-width input fields */
+input[type=text], input[type=password] {
   width: 100%;
-  font-size: 18px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-  div{white-space:pre:}
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+          
           
 .card button:hover {
   opacity: 0.7;
@@ -48,8 +65,30 @@
 
     <body>
     <header>
-       
-        <img src="logo-removebg-preview.png"height="100"width="200">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+      <img src="logo-removebg-preview.png"height="100"width="200">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+        
       <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -78,7 +117,35 @@ Bontlejwame Skincare is a South African skincare brand specialising in natural s
        Our Products are Formulated using natural , safe and gentle ingredients.They are quality tested and approved to all skin types.
       </p>
     </div>
-   
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign in</button>
+
+  <div id="id01" class="modal">
+    
+    <form class="modal-content" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  
    <h2>Products</h2>
     <div class="row align-items-center">
         <div class="col">
